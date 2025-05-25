@@ -35,7 +35,7 @@ const messages = {
       signup: {
         title: "Sign Up",
         toasts: {
-          success: "User created successfully! Log in now!", // Corrected: "Log in now!!!" to "Log in now!"
+          success: "User created successfully! Log in now!!!",
           fail: "Error creating user. Check the provided data.",
         },
         form: {
@@ -415,7 +415,6 @@ const messages = {
             darkmode: "Dark mode",
             lightmode: "Light mode",
             language: "Select language",
-            about: "About", // Added from pt.js
             logout: "Logout",
           },
         },
@@ -605,7 +604,7 @@ const messages = {
         searchPlaceholder: "Search",
         buttons: {
           add: "New Announcement",
-          contactLists: "Announcement Lists", // Assuming this should be "Announcement Lists", pt.js has "Listas de Informativos"
+          contactLists: "Announcement Lists",
         },
         table: {
           priority: "Priority",
@@ -648,7 +647,7 @@ const messages = {
       campaignsConfig: {
         title: "Campaign Configurations",
       },
-      queues: { // Section from pt.js, was buttons in en.js
+      queues: {
         title: "Queues & Chatbot",
         table: {
           name: "Name",
@@ -656,16 +655,15 @@ const messages = {
           greeting: "Greeting Message",
           actions: "Actions",
         },
-        buttons: { // This sub-object was directly under queues in en.js before
-          add: "Add Queue",
-        },
-        confirmationModal: { // This sub-object was directly under queues in en.js before
-          deleteTitle: "Delete",
-          deleteMessage:
-            "Are you sure? This action cannot be undone! The tickets from this queue will still exist but will no longer be assigned to any queue.",
-        },
       },
-      // Removed the separate buttons and confirmationModal that were directly under queues in the old en.js
+      buttons: {
+        add: "Add Queue",
+      },
+      confirmationModal: {
+        deleteTitle: "Delete",
+        deleteMessage:
+          "Are you sure? This action cannot be undone! The tickets from this queue will still exist but will no longer be assigned to any queue.",
+      },
       queueSelect: {
         inputLabel: "Queues",
       },
@@ -692,18 +690,18 @@ const messages = {
       helps: {
         title: "Help Center",
       },
-      about: { // Matched with pt.js structure and translated where needed.
-        aboutthe: "About", // Changed from "About the" to match pt.js "Sobre o" -> "About"
-        copyright: "© 2024 - Powered by ticketz", // Kept English version
+      about: {
+        aboutthe: "About the",
+        copyright: "© 2024 - Powered by ticketz",
         buttonclose: "Close",
         title: "About ticketz",
         abouttitle: "Origin and improvements",
-        aboutdetail: "Ticketz is indirectly derived from the Whaticket project with improvements shared by the developers of the EquipeChat system through the VemFazer channel on YouTube, later improved by Claudemir Todo Bom.", // Ensured translation
+        aboutdetail: "ticketz is indirectly derived from the Whaticket project with improvements shared by the developers of the EquipeChat system through the VemFazer channel on YouTube, later improved by Claudemir Todo Bom",
         aboutauthorsite: "Author's site",
         aboutwhaticketsite: "Whaticket Community site on Github",
         aboutvemfazersite: "Vem Fazer channel site on Github",
         licenseheading: "Open Source License",
-        licensedetail: "Ticketz is licensed under the GNU Affero General Public License version 3, which means that any user who has access to this application has the right to obtain access to the source code. More information at the links below:", // Ensured translation
+        licensedetail: "ticketz is licensed under the GNU Affero General Public License version 3, which means that any user who has access to this application has the right to obtain access to the source code. More information at the links below:",
         licensefulltext: "Full text of the license",
         licensesourcecode: "Ticketz source code"
       },
@@ -717,7 +715,7 @@ const messages = {
           contact: "Contact",
           body: "Message",
           sendAt: "Scheduling Date",
-          sentAt: "Sending Date", // Corrected from "Sending Date" to "Sent Date" as in en.js
+          sentAt: "Sending Date",
           status: "Status",
           actions: "Actions",
         },
@@ -737,7 +735,7 @@ const messages = {
         table: {
           name: "Name",
           color: "Color",
-          tickets: "Records", // pt.js has "Registros", en.js had "Records"
+          tickets: "Records",
           actions: "Actions",
           id: "Id",
           kanban: "Kanban",
@@ -775,7 +773,7 @@ const messages = {
         title: "Settings",
         chatbotTicketTimeout: "Chatbot ticket timeout (minutes)",
         chatbotTicketTimeoutAction: "Action after chatbot timeout",
-        settings: { // This nested 'settings' seems redundant with the parent 'settings'. pt.js also has it.
+        settings: {
           userCreation: {
             name: "User creation",
             options: {
@@ -784,19 +782,19 @@ const messages = {
             },
           },
         },
-        validations: { // pt.js: "Avaliações" -> "Ratings" or "Reviews", not "validations"
-          title: "Ratings", // Corrected from "validations"
+        validations: {
+          title: "validations",
           options: {
-            enabled: "Enabled", // pt.js: Habilitado
-            disabled: "Disabled", // pt.js: Desabilitado
+            enabled: "enabled",
+            disabled: "disabled",
           },
         },
         OfficeManagement: {
-          title: "Office Management", // pt.js: "Gerenciamento de Expediente"
+          title: "Office Management",
           options: {
-            disabled: "Disabled", // pt.js: "Desabilitado"
-            ManagementByDepartment: "Management By Queue", // pt.js: "Gerenciamento Por Fila"
-            ManagementByCompany: "Management By Company", // pt.js: "Gerenciamento Por Empresa"
+            disabled: "disabled",
+            ManagementByDepartment: "Management By Department",
+            ManagementByCompany: "Management By Company",
           },
         },
         outOfHoursAction: {
@@ -809,50 +807,50 @@ const messages = {
         IgnoreGroupMessages: {
           title: "Ignore Group Messages",
           options: {
-            enabled: "Enabled", // pt.js: "Ativado"
-            disabled: "Disabled", // pt.js: "Desativado"
+            enabled: "enabled",
+            disabled: "disabled",
           },
         },
         soundGroupNotifications: {
           title: "Sound on Group Notifications",
           options: {
-            enabled: "Enabled", // pt.js: "Ativado"
-            disabled: "Disabled", // pt.js: "Desativado"
+            enabled: "enabled",
+            disabled: "disabled",
           },
         },
         groupsTab: {
           title: "Groups Tab",
           options: {
-            enabled: "Enabled", // pt.js: "Ativado"
-            disabled: "Disabled", // pt.js: "Desativado"
+            enabled: "enabled",
+            disabled: "disabled",
           },
         },
         VoiceAndVideoCalls: {
           title: "Voice and video calls",
           options: {
-            enabled: "Ignore", // pt.js: "Ignorar"
-            disabled: "Report unavailability", // pt.js: "informar indisponibilidade"
+            enabled: "Ignore",
+            disabled: "unavailability report",
           },
         },
         AutomaticChatbotOutput: {
-          title: "Automatic Chatbot Output", // pt.js: "Saída automática de chatbot"
+          title: "Automatic Chatbot Output",
           options: {
-            enabled: "Enabled", // pt.js: "Activado"
-            disabled: "Disabled", // pt.js: "Desativado"
+            enabled: "enabled",
+            disabled: "disabled",
           },
         },
         QuickMessages: {
-          title: "Quick Messages", // pt.js: "Mensagens Rápidas"
+          title: "Quick Messages",
           options: {
-            enabled: "By company", // pt.js: "Por empresa"
-            disabled: "By User", // pt.js: "Por Usuário"
+            enabled: "By company",
+            disabled: "By User",
           },
         },
         AllowRegistration: {
-          title: "Allow Registration", // pt.js: "Permitir cadastro"
+          title: "Allow Registration",
           options: {
-            enabled: "Enabled", // pt.js: "Ativado"
-            disabled: "Disabled", // pt.js: "Desativado"
+            enabled: "enabled",
+            disabled: "disabled",
           },
         },
         FileUploadLimit: {
@@ -862,23 +860,23 @@ const messages = {
           title: "File Download Limit (MB)",
         },
         "messageVisibility": {
-          "title": "Message Visibility", // pt.js: "Visibilidade da mensagem"
+          "title": "Message Visibility",
           "options": {
-            "respectMessageQueue": "Respect message queue", // pt.js: "Respeitar fila da mensagem"
-            "respectTicketQueue": "Respect ticket queue" // pt.js: "Respeitar fila do ticket"
+            "respectMessageQueue": "Respect queue of message",
+            "respectTicketQueue": "Respect queue of ticket"
           }
         },
         "keepQueueAndUser": {
-          "title": "Keep queue and user on closed ticket", // pt.js: "Manter fila e usuário no ticket fechado"
+          "title": "Keep queue and user on closed ticket",
           "options": {
-            "enabled": "Enabled", // pt.js: "Ativado"
-            "disabled": "Disabled" // pt.js: "Desativado"
+            "enabled": "Enabled",
+            "disabled": "Disabled"
           }
         },
         WelcomeGreeting: {
-          greetings: "Hello", // pt.js: Olá
-          welcome: "Welcome to", // pt.js: Seja bem-vindo a
-          expirationTime: "Active until", // pt.js: Ativo até
+          greetings: "Hello",
+          welcome: "Welcome to",
+          expirationTime: "Active until",
         },
         Options: {
           title: "Options",
@@ -886,8 +884,8 @@ const messages = {
         Companies: {
           title: "Companies",
         },
-        schedules: { // pt.js: "Horários"
-          title: "Office Hours", // Corrected to be more specific than "schedules"
+        schedules: {
+          title: "schedules",
         },
         Plans: {
           title: "Plans",
@@ -899,15 +897,15 @@ const messages = {
           title: "Whitelabel",
         },
         PaymentGateways: {
-          title: "Payment Gateways", // Corrected from "Pasarelas de pago"
+          title: "Pasarelas de pago",
         },
-        AIProvider: { // Added from pt.js
-          title: "AI Provider", // pt.js: "Serviço de IA"
+        AIProvider: {
+          title: "AI Provider",
         },
-        AudioTranscriptions: { // Added from pt.js
-          title: "Audio Transcriptions", // pt.js: "Transcrição de áudio"
+        AudioTranscriptions: {
+          title: "Audio Transcriptions",
         },
-        TagsMode: { // Ensured this is present
+        TagsMode: {
           title: "Tags Mode",
           options: {
             ticket: "Ticket",
@@ -939,7 +937,6 @@ const messages = {
         edited: "Edited",
         forwarded: "Forwarded",
       },
-
       contactDrawer: {
         header: "Contact Information",
         buttons: {
@@ -967,7 +964,7 @@ const messages = {
           cancel: "Cancel",
         },
       },
-      confirmationModal: { // Generic confirmation modal buttons
+      confirmationModal: {
         buttons: {
           confirm: "Ok",
           cancel: "Cancel",
@@ -1009,16 +1006,16 @@ const messages = {
             contact_blacklist: "Selected contacts",
             match_last_seen: "Match Last Seen",
             known: "Known",
-            disable: "Disabled", // pt.js: "Desativada" -> "Disabled"
+            disable: "Disabled",
             hrs24: "24 Hours",
             dias7: "7 Days",
             dias90: "90 Days",
           },
           readreceipts: "To update the Read Receipts privacy",
           profile: "To update the Profile Picture privacy",
-          status: "To update the Status privacy", // pt.js: "recados" -> "Status" (common term for WhatsApp status)
+          status: "To update the Messages privacy",
           online: "To update the Online privacy",
-          last: "To update the Last Seen privacy", // pt.js: "Último Visto"
+          last: "To update the LastSeen privacy",
           groupadd: "To update the Groups Add privacy",
           calladd: "To update the Call Add privacy",
           disappearing: "To update the Default Disappearing Mode",
@@ -1041,24 +1038,24 @@ const messages = {
         ERR_OTHER_OPEN_TICKET: "There is already an open ticket for this contact.",
         ERR_SESSION_EXPIRED: "Session expired. Please log in.",
         ERR_USER_CREATION_DISABLED: "User creation has been disabled by the administrator.",
-        ERR_NO_PERMISSION: "You do not have permission to access this resource.", // Same as ERR_FORBIDDEN, but kept as is if backend sends distinct codes
+        ERR_NO_PERMISSION: "You do not have permission to access this resource.",
         ERR_DUPLICATED_CONTACT: "A contact with this number already exists.",
         ERR_NO_SETTING_FOUND: "No setting found with this ID.",
         ERR_NO_CONTACT_FOUND: "No contact found with this ID.",
         ERR_NO_TICKET_FOUND: "No ticket found with this ID.",
         ERR_NO_USER_FOUND: "No user found with this ID.",
-        ERR_NO_WAPP_FOUND: "No WhatsApp found with this ID.", // This covers pt.js's ERR_NO_WAPP_FOUND
-        ERR_WAPP_NOT_FOUND: "Connection unavailable.", // Added from pt.js (Conexão indisponível)
+        ERR_NO_WAPP_FOUND: "No WhatsApp found with this ID.",
         ERR_CREATING_MESSAGE: "Error creating message in the database.",
         ERR_CREATING_TICKET: "Error creating ticket in the database.",
         ERR_FETCH_WAPP_MSG: "Error fetching message from WhatsApp, perhaps it is too old.",
         ERR_QUEUE_COLOR_ALREADY_EXISTS: "This color is already in use, choose another.",
         ERR_WAPP_GREETING_REQUIRED: "Greeting message is mandatory when there is more than one queue.",
-        ERR_SUBSCRIPTION_CHECK_FAILED: "Invalid or missing subscription.", // Translated from "Assinatura inválida ou não encontrada"
-        ERR_SUBSCRIPTION_EXPIRED: "Subscription expired.", // Translated from "Assinatura expirada"
-        ERR_UNKOWN: "Unknown error.", // Translated from "Erro desconhecido"
+        ERR_SUBSCRIPTION_CHECK_FAILED: "Subscription check failed.",
+        ERR_WAPP_NOT_FOUND: "Connection unavailable.",
+        ERR_SUBSCRIPTION_EXPIRED: "Your subscription has expired.",
+        ERR_UNKOWN: "Unknown error.",
       },
-      ticketz: { // Added from pt.js and translated
+      ticketz: {
         registration: {
           header: "Register in the Ticketz user base",
           description: "Fill in the fields below to register in the Ticketz user base and receive news about the project.",
@@ -1068,15 +1065,14 @@ const messages = {
           submit: "Register",
         },
         support: {
-          title: "Support Ticketz Open Source project", // pt.js: "Apoie o projeto Ticketz Open Source"
+          title: "Support Ticketz project",
           mercadopagotitle: "Credit Card",
-          recurringbrl: "Recurring donations in BRL", // Kept BRL as it's specific
-          paypaltitle: "Credit Card", // Same as mercadopago, but fine
-          international: "International in USD", // pt.js: "Internacional em US$"
+          recurringbrl: "Recurring donations in BRL",
+          paypaltitle: "Credit Card",
+          international: "Donations in USD",
         }
       },
     },
   },
 };
-
 export { messages };
