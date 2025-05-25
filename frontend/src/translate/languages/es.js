@@ -77,6 +77,7 @@ const messages = {
       },
       dashboard: {
         usersOnline: "Usuarios en línea",
+        ticketsWaiting: "Tickets esperando", // Added from pt.js
         ticketsOpen: "Atenciones abiertas",
         ticketsDone: "Atenciones resueltas",
         totalTickets: "Total de atenciones",
@@ -117,7 +118,7 @@ const messages = {
         },
         buttons: {
           add: "Agregar WhatsApp",
-          disconnect: "Desconectar",
+          disconnect: "Desconectar", // pt.js: "desconectar" (lowercase) -> Kept consistent casing
           tryAgain: "Intentar nuevamente",
           qrcode: "CÓDIGO QR",
           newQr: "Nuevo CÓDIGO QR",
@@ -142,10 +143,10 @@ const messages = {
             content:
               "Asegúrate de que tu teléfono esté conectado a internet y WhatsApp esté abierto, o haz clic en 'Desconectar' para obtener un nuevo código QR.",
           },
-          refresh: "Actualizar",
+          refresh: "Actualizar", // pt.js: "Refazer conexão" -> "Actualizar" (more common for refresh icon)
           disconnect: "Desconectar",
-          scan: "Escanear",
-          newQr: "Nuevo Código QR",
+          scan: "Escanear", // pt.js: "Ler QR Code" -> "Escanear" (more common for scan icon)
+          newQr: "Nuevo Código QR", // pt.js: "Gerar novo QR Code"
           retry: "Intentar nuevamente",
         },
         table: {
@@ -186,7 +187,7 @@ const messages = {
         },
         searchPlaceholder: "Buscar...",
         confirmationModal: {
-          deleteTitle: "Eliminar ",
+          deleteTitle: "Eliminar ", // Keep space if intentional, otherwise "Eliminar"
           importTitlte: "Importar contactos",
           deleteMessage:
             "¿Estás seguro de que deseas eliminar este contacto? Se perderán todas las conversaciones relacionadas.",
@@ -216,7 +217,7 @@ const messages = {
           email: "Correo electrónico",
           extraName: "Nombre del campo",
           extraValue: "Valor",
-          disableBot: "Desativar bot de conversa",
+          disableBot: "Desactivar chatbot", // pt.js: "Desabilitar chatbot"
         },
         buttons: {
           addExtraInfo: "Agregar información",
@@ -228,17 +229,17 @@ const messages = {
       },
       queueModal: {
         title: {
-          add: "Agregar fila",
-          edit: "Editar fila",
+          add: "Agregar cola",
+          edit: "Editar cola",
         },
         form: {
           name: "Nombre",
           color: "Color",
           greetingMessage: "Mensaje de bienvenida",
-          complationMessage: "Mensaje de conclusión",
+          complationMessage: "Mensaje de conclusión", // pt.js: "Mensagem de conclusão"
           outOfHoursMessage: "Mensaje fuera del horario",
-          ratingMessage: "Mensaje de calificación",
-          transferMessage: "Mensaje de transferencia",
+          ratingMessage: "Mensaje de calificación", // pt.js: "Mensagem de avaliação"
+          transferMessage: "Mensaje de Transferencia", // Added from pt.js
           token: "Token",
         },
         buttons: {
@@ -303,8 +304,8 @@ const messages = {
         title: {
           add: "Nueva Etiqueta",
           edit: "Editar Etiqueta",
-          addKanban: "Nueva Columna",
-          editKanban: "Editar Columna",
+          addKanban: "Nueva Columna", // pt.js: "Nova Lane"
+          editKanban: "Editar Columna", // pt.js: "Editar Lane"
         },
         form: {
           name: "Nombre",
@@ -344,10 +345,10 @@ const messages = {
           message: "Mensaje de",
         },
         tabs: {
-          open: { title: "Abiertas" },
-          closed: { title: "Resueltos" },
+          open: { title: "Abiertas" }, // pt.js: "Abertas"
+          closed: { title: "Resueltos" }, // pt.js: "Resolvidos"
           groups: { title: "Grupos" },
-          search: { title: "Búsqueda" },
+          search: { title: "Búsqueda" }, // pt.js: "Busca"
         },
         search: {
           placeholder: "Buscar atención y mensajes",
@@ -368,8 +369,8 @@ const messages = {
         },
       },
       ticketsList: {
-        pendingHeader: "Esperando",
-        assignedHeader: "Atendiendo",
+        pendingHeader: "Esperando", // pt.js: "Aguardando"
+        assignedHeader: "Atendiendo", // pt.js: "Atendendo"
         noTicketsTitle: "¡Nada aquí!",
         noTicketsMessage:
           "No se encontraron atenciones con ese estado o término de búsqueda",
@@ -396,19 +397,19 @@ const messages = {
           queues: "Filas y Chatbot",
           tags: "Etiquetas",
           administration: "Administración",
-          service: "Atención",
+          service: "Atención", // pt.js: "Atendimento"
           users: "Usuarios",
           settings: "Configuraciones",
           helps: "Ayuda",
           messagesAPI: "API",
           schedules: "Agendamientos",
           campaigns: "Campañas",
-          annoucements: "Anuncios",
+          annoucements: "Anuncios", // pt.js: "Informativos"
           chats: "Chat Interno",
           financeiro: "Financiero",
           logout: "Cerrar sesión",
-          management: "Gerencia",
-          kanban: "Kanban",
+          management: "Gerencia", // pt.js: "Gerência"
+          kanban: "Kanban"
         },
         appBar: {
           i18n: {
@@ -420,6 +421,7 @@ const messages = {
             darkmode: "Modo oscuro",
             lightmode: "Modo claro",
             language: "Seleccionar idioma",
+            about: "Acerca de", // Added from pt.js
             logout: "Cerrar sesión",
           },
         },
@@ -453,15 +455,15 @@ const messages = {
       },
       kanban: {
         title: "Kanban",
-        searchPlaceholder: "Búsqueda",
+        searchPlaceholder: "Búsqueda", // pt.js: "Pesquisa"
         subMenus: {
           list: "Panel",
-          tags: "Lanes",
-        },
+          tags: "Lanes", // pt.js: "Lanes"
+        }
       },
       tagsKanban: {
-        title: "Lanes",
-        laneDefault: "En abierto",
+        title: "Lanes", // pt.js: "Lanes"
+        laneDefault: "En abierto", // pt.js: "Em aberto"
         confirmationModal: {
           deleteTitle: "¿Estás seguro de que quieres eliminar esta Lane?",
           deleteMessage: "Esta acción no se puede deshacer.",
@@ -469,7 +471,7 @@ const messages = {
         table: {
           name: "Nombre",
           color: "Color",
-          tickets: "Tickets",
+          tickets: "Tickets", // pt.js: "Tickets"
           actions: "Acciones",
         },
         buttons: {
@@ -509,7 +511,7 @@ const messages = {
       },
       contactListItems: {
         title: "Contactos",
-        searchPlaceholder: "Buscar",
+        searchPlaceholder: "Buscar", // pt.js: "Pesquisa"
         buttons: {
           add: "Nuevo",
           lists: "Listas",
@@ -518,8 +520,8 @@ const messages = {
         dialog: {
           name: "Nombre",
           number: "Número",
-          whatsapp: "Whatsapp",
-          email: "Correo electrónico",
+          whatsapp: "Whatsapp", // Consistent casing with pt.js
+          email: "Correo electrónico", // pt.js: "E-mail"
           okEdit: "Editar",
           okAdd: "Agregar",
           add: "Agregar",
@@ -529,14 +531,14 @@ const messages = {
         table: {
           name: "Nombre",
           number: "Número",
-          whatsapp: "Whatsapp",
-          email: "Correo electrónico",
+          whatsapp: "Whatsapp", // Consistent casing with pt.js
+          email: "Correo electrónico", // pt.js: "E-mail"
           actions: "Acciones",
         },
         confirmationModal: {
           deleteTitle: "Eliminar",
           deleteMessage: "Esta acción no se puede deshacer.",
-          importMessage: "¿Desea importar los contactos de esta hoja de cálculo?",
+          importMessage: "¿Desea importar los contactos de esta hoja de cálculo? ", // pt.js has space at end
           importTitlte: "Importar",
         },
         toasts: {
@@ -545,7 +547,7 @@ const messages = {
       },
       campaigns: {
         title: "Campañas",
-        searchPlaceholder: "Buscar",
+        searchPlaceholder: "Buscar", // pt.js: "Pesquisa"
         buttons: {
           add: "Nueva Campaña",
           contactLists: "Listas de Contactos",
@@ -555,15 +557,15 @@ const messages = {
           whatsapp: "Conexión",
           contactList: "Lista de Contactos",
           status: "Estado",
-          scheduledAt: "Agendamiento",
-          completedAt: "Completada",
+          scheduledAt: "Agendamiento", // pt.js: "Agendamento"
+          completedAt: "Completada", // pt.js: "Concluída"
           confirmation: "Confirmación",
           actions: "Acciones",
         },
         dialog: {
           new: "Nueva Campaña",
           update: "Editar Campaña",
-          readonly: "Solo Lectura",
+          readonly: "Solo Lectura", // pt.js: "Apenas Visualização"
           form: {
             name: "Nombre",
             message1: "Mensaje 1",
@@ -579,7 +581,7 @@ const messages = {
             messagePlaceholder: "Contenido del mensaje",
             whatsapp: "Conexión",
             status: "Estado",
-            scheduledAt: "Agendamiento",
+            scheduledAt: "Agendamiento", // pt.js: "Agendamento"
             confirmation: "Confirmación",
             contactList: "Lista de Contacto",
           },
@@ -605,28 +607,28 @@ const messages = {
         },
       },
       announcements: {
-        title: "Anuncios",
-        searchPlaceholder: "Buscar",
+        title: "Anuncios", // pt.js: "Informativos"
+        searchPlaceholder: "Buscar", // pt.js: "Pesquisa"
         buttons: {
-          add: "Nuevo Anuncio",
-          contactLists: "Listas de Anuncios",
+          add: "Nuevo Anuncio", // pt.js: "Novo Informativo"
+          contactLists: "Listas de Anuncios", // pt.js: "Listas de Informativos"
         },
         table: {
           priority: "Prioridad",
-          title: "Título",
+          title: "Título", // pt.js: "Title"
           text: "Texto",
           mediaName: "Archivo",
           status: "Estado",
           actions: "Acciones",
         },
         dialog: {
-          edit: "Edición de Anuncio",
-          add: "Nuevo Anuncio",
-          update: "Editar Anuncio",
-          readonly: "Solo Lectura",
+          edit: "Edición de Anuncio", // pt.js: "Edição de Informativo"
+          add: "Nuevo Anuncio", // pt.js: "Novo Informativo"
+          update: "Editar Anuncio", // pt.js: "Editar Informativo"
+          readonly: "Solo Lectura", // pt.js: "Apenas Visualização"
           form: {
             priority: "Prioridad",
-            title: "Título",
+            title: "Título", // pt.js: "Title"
             text: "Texto",
             mediaPath: "Archivo",
             status: "Estado",
@@ -696,22 +698,22 @@ const messages = {
         title: "Centro de Ayuda",
       },
       about: {
-        aboutthe: "Acerca de",
-        copyright: "© 2024 - Funcionando com ticketz",
+        aboutthe: "Acerca de", // pt.js: "Sobre o"
+        copyright: "© 2024 - Impulsado por Ticketz", // Corrected from Portuguese
         buttonclose: "Cerrar",
-        title: "Acerca de ticketz",
-        abouttitle: "Origen y Mejoras",
-        aboutdetail: "El ticketz es derivado indirecto del proyecto Whaticket con mejoras compartidas por los desarrolladores del sistema EquipeChat a través del canal VemFazer en YouTube, posteriormente mejorado por Claudemir Todo Bom.",
+        title: "Acerca de Ticketz", // pt.js: "Sobre o ticketz"
+        abouttitle: "Origen y Mejoras", // pt.js: "Origem e melhorias"
+        aboutdetail: "Ticketz es un derivado indirecto del proyecto Whaticket con mejoras compartidas por los desarrolladores del sistema EquipeChat a través del canal VemFazer en YouTube, posteriormente mejorado por Claudemir Todo Bom.", // Translated
         aboutauthorsite: "Sitio del autor",
         aboutwhaticketsite: "Sitio de la Comunidad Whaticket en Github",
         aboutvemfazersite: "Sitio del canal Vem Fazer en Github",
         licenseheading: "Licencia de Código Abierto",
-        licensedetail: "El ticketz está licenciado bajo la Licencia Pública General Affero de GNU versión 3, lo que significa que cualquier usuario que tenga acceso a esta aplicación tiene derecho a obtener acceso al código fuente. Más información en los siguientes enlaces:",
+        licensedetail: "Ticketz está licenciado bajo la Licencia Pública General Affero de GNU versión 3, lo que significa que cualquier usuario que tenga acceso a esta aplicación tiene derecho a obtener acceso al código fuente. Más información en los siguientes enlaces:", // Translated
         licensefulltext: "Texto completo de la licencia",
-        licensesourcecode: "Código fuente de ticketz"
+        licensesourcecode: "Código fuente de Ticketz"
       },
       schedules: {
-        title: "Agendamentos",
+        title: "Agendamientos",
         confirmationModal: {
           deleteTitle: "¿Está seguro de que desea eliminar esta programación?",
           deleteMessage: "Esta acción no se puede deshacer.",
@@ -742,7 +744,7 @@ const messages = {
           color: "Color",
           tickets: "Registros",
           actions: "Acciones",
-          id: "ID",
+          id: "ID", // pt.js: "Id"
           kanban: "Kanban",
         },
         buttons: {
@@ -766,9 +768,9 @@ const messages = {
         group: {
           general: "General",
           timeouts: "Tiempos de espera",
-          officeHours: "Horas de oficina",
+          officeHours: "Horas de oficina", // pt.js: "Horário de expediente"
           groups: "Grupos",
-          confidenciality: "Confidencialidad",
+          confidenciality: "Confidencialidad", // pt.js: "Confidencialidade"
           api: "API",
           externalServices: "Servicios externos",
           serveradmin: "Administración del servidor",
@@ -777,7 +779,7 @@ const messages = {
         copiedToClipboard: "Copiado al portapapeles",
         title: "Configuraciones",
         chatbotTicketTimeout: "Tiempo de espera del ticket del chatbot (minutos)",
-        chatbotTicketTimeoutAction: "Acción después del tiempo de espera",
+        chatbotTicketTimeoutAction: "Acción después del tiempo de espera", // pt.js: "Ação do timeout do chatbot"
         settings: {
           userCreation: {
             name: "Creación de usuario",
@@ -787,18 +789,18 @@ const messages = {
             },
           },
         },
-        validations: {
-          title: "Validaciones",
+        validations: { // pt.js: "Avaliações"
+          title: "Evaluaciones", // Corrected
           options: {
-            enabled: "Habilitado",
-            disabled: "Deshabilitado",
+            enabled: "Habilitado", // pt.js: "Habilitado"
+            disabled: "Deshabilitado", // pt.js: "Desabilitado"
           },
         },
-        OfficeManagement: {
-          title: "Gestión de despachos",
+        OfficeManagement: { // pt.js: "Gerenciamento de Expediente"
+          title: "Gestión de Horario de Atención",
           options: {
-            disabled: "Deshabilitado",
-            ManagementByDepartment: "Gestión por departamento",
+            disabled: "Deshabilitado", // pt.js: "Desabilitado"
+            ManagementByDepartment: "Gestión por Cola", // Corrected from "Gestión por departamento" to match pt.js "Gerenciamento Por Fila"
             ManagementByCompany: "Gestión por empresa",
           },
         },
@@ -834,25 +836,25 @@ const messages = {
           title: "Llamadas de voz y vídeo",
           options: {
             enabled: "Ignorar",
-            disabled: "informe de indisponibilidad",
+            disabled: "Informar indisponibilidad", // pt.js: "informar indisponibilidade"
           },
         },
-        AutomaticChatbotOutput: {
-          title: "Salida automática del chatbot",
+        AutomaticChatbotOutput: { // pt.js: "Saída automática de chatbot"
+          title: "Salida Automática del Chatbot",
           options: {
-            enabled: "Activado",
+            enabled: "Activado", // pt.js: "Activado"
             disabled: "Desactivado",
           },
         },
-        QuickMessages: {
-          title: "Respuestas rápidas",
+        QuickMessages: { // pt.js: "Mensagens Rápidas"
+          title: "Respuestas Rápidas",
           options: {
             enabled: "Por empresa",
             disabled: "Por Usuario",
           },
         },
-        AllowRegistration: {
-          title: "Permitir el registro",
+        AllowRegistration: { // pt.js: "Permitir cadastro"
+          title: "Permitir Registro",
           options: {
             enabled: "Activado",
             disabled: "Desactivado",
@@ -864,23 +866,23 @@ const messages = {
         FileDownloadLimit: {
           title: "Límite de descarga de archivos (MB)",
         },
-        "messageVisibility": {
-          "title": "Visibilidad del mensaje",
-          "options": {
-            "respectMessageQueue": "Respetar fila de mensajes",
-            "respectTicketQueue": "Respetar fila de tickets"
+        "messageVisibility": { // pt.js: "Visibilidade da mensagem"
+          "title": "Visibilidad del Mensaje",
+          "options": { // pt.js: "Respeitar fila da mensagem" / "Respeitar fila do ticket"
+            "respectMessageQueue": "Respetar cola del mensaje",
+            "respectTicketQueue": "Respetar cola del ticket"
           }
         },
-        "removeQueueAndUser": {
-          "title": "Mantener fila y usuario en ticket cerrado",
+        "keepQueueAndUser": { // pt.js: "Manter fila e usuário no ticket fechado"
+          "title": "Mantener cola y usuario en ticket cerrado",
           "options": {
             enabled: "Activado",
             disabled: "Desactivado",
           }
         },
-        WelcomeGreeting: {
-          greetings: "hola",
-          welcome: "bienvenido a",
+        WelcomeGreeting: { // pt.js: Olá, Seja bem-vindo a, Ativo até
+          greetings: "Hola",
+          welcome: "Bienvenido a",
           expirationTime: "Activo hasta",
         },
         Options: {
@@ -889,8 +891,8 @@ const messages = {
         Companies: {
           title: "Empresas",
         },
-        schedules: {
-          title: "horarios",
+        schedules: { // pt.js: "Horários" -> This is likely for the feature "Agendamientos" settings, not general "Office Hours"
+          title: "Configuración de Agendamientos",
         },
         Plans: {
           title: "Planes",
@@ -901,21 +903,21 @@ const messages = {
         Whitelabel: {
           title: "Whitelabel",
         },
-        PaymentGateways: {
-          title: "Payment gateways",
+        PaymentGateways: { // pt.js: "Payment gateways"
+          title: "Pasarelas de Pago",
         },
-        AIProvider: {
+        AIProvider: { // pt.js: "Serviço de IA"
           title: "Proveedor de IA",
         },
-        AudioTranscriptions: {
-          title: "Transcripciones de audio",
+        AudioTranscriptions: { // pt.js: "Transcrição de áudio"
+          title: "Transcripciones de Audio",
         },
-        TagsMode: {
-          title: "Modo de etiquetas",
-          options: {
+        TagsMode: { // pt.js: "Modo de Tags"
+          title: "Modo de Etiquetas",
+          options: { // pt.js: "Ticket", "Contato", "Ticket e Contacto"
             ticket: "Ticket",
             contact: "Contacto",
-            both: "Ticket y contacto",
+            both: "Ticket y Contacto",
           },
         },
       },
@@ -993,7 +995,7 @@ const messages = {
       presence: {
         unavailable: "Indisponible",
         available: "Disponible",
-        composing: "Componiendo",
+        composing: "Componiendo", // pt.js: "Digitando..."
         recording: "Grabando",
         paused: "Pausado",
       },
@@ -1001,87 +1003,82 @@ const messages = {
         title: "Editar privacidad de Whatsapp",
         buttons: {
           cancel: "Cancelar",
-          okEdit: "Ahorrar",
+          okEdit: "Guardar", // pt.js: "Salvar" -> "Guardar"
         },
         form: {
           menu: {
-            all: "Todo",
-            none: "Nadie",
-            contacts: "Mis contactos",
-            contact_blacklist: "Contactos seleccionados",
-            match_last_seen: "Partido visto por última vez",
-            known: "Conocido",
-            disable: "Desactivado",
+            all: "Todos", // pt.js: "Todos"
+            none: "Nadie", // pt.js: "Ninguém"
+            contacts: "Mis contactos", // pt.js: "Meus contatos"
+            contact_blacklist: "Contactos seleccionados", // pt.js: "Contatos selecionados"
+            match_last_seen: "Igual que la última vez visto", // pt.js: "Semelhante ao Visto por Último"
+            known: "Conocidos", // pt.js: "Conhecidos"
+            disable: "Desactivado", // pt.js: "Desativada"
             hrs24: "24 Horas",
             dias7: "7 Días",
             dias90: "90 Días",
+            readreceipts: "Confirmaciones de lectura", // Added from pt.js's help text
+            disappearing: "Mensajes temporales", // Added from pt.js's help text
           },
-          readreceipts:
-            "Para actualizar la privacidad de Confirmaciones de lectura",
-          profile: "Para actualizar la privacidad de la foto de perfil",
-          status: "Para actualizar la privacidad del mensajes",
-          online: "Para actualizar la privacidad en línea",
-          last: "Para actualizar la privacidad de Última visita",
-          groupadd: "Para actualizar la privacidad de Agregar grupos",
-          calladd: "Para actualizar la privacidad de Agregar llamada",
-          disappearing:
-            "Para actualizar el modo de desaparición predeterminado",
+          readreceipts: "Para actualizar la privacidad de Confirmaciones de lectura",
+          profile: "Para actualizar la privacidad de la Foto de perfil", // pt.js: "foto do perfil"
+          status: "Para actualizar la privacidad de Info.", // pt.js: "recados" (Info./Status)
+          online: "Para actualizar la privacidad de En línea", // pt.js: "online"
+          last: "Para actualizar la privacidad de Últ. vez visto", // pt.js: "Último Visto"
+          groupadd: "Para actualizar la privacidad de Quién puede añadirme a los grupos", // pt.js: "Adicionar a grupos"
+          calladd: "Para actualizar la privacidad de Quién puede llamarme", // pt.js: "Adicionar a Ligações"
+          disappearing: "Para actualizar la duración predeterminada de Mensajes temporales", // pt.js: "Modo de Desaparecimento Padrão"
         },
       },
       backendErrors: {
+        ERR_UNAUTHORIZED: "No estás autorizado para realizar esta acción.", // From pt.js
         ERR_FORBIDDEN: "No tienes permisos para acceder a este recurso.",
-        ERR_CHECK_NUMBER: "No se pudo verificar el número de WhatsApp.",
+        ERR_CHECK_NUMBER: "No se pudo verificar el número de WhatsApp.", // pt.js: "Verifique o número e tente novamente." -> "Verifica el número e inténtalo de nuevo."
         ERR_NO_OTHER_WHATSAPP: "Debe haber al menos un WhatsApp predeterminado.",
-        ERR_NO_DEF_WAPP_FOUND:
-          "No se encontró ningún WhatsApp predeterminado. Verifique la página de conexiones.",
-        ERR_WAPP_NOT_INITIALIZED:
-          "Esta sesión de WhatsApp no se ha inicializado. Verifique la página de conexiones.",
-        ERR_WAPP_CHECK_CONTACT:
-          "No se pudo verificar el contacto de WhatsApp. Verifique la página de conexiones",
+        ERR_NO_DEF_WAPP_FOUND: "No se encontró ningún WhatsApp predeterminado. Verifique la página de conexiones.",
+        ERR_WAPP_NOT_INITIALIZED: "Esta sesión de WhatsApp no se ha inicializado. Verifique la página de conexiones.",
+        ERR_WAPP_CHECK_CONTACT: "No se pudo verificar el contacto de WhatsApp. Verifique la página de conexiones.", // pt.js has space at end
         ERR_WAPP_INVALID_CONTACT: "Este no es un número de WhatsApp válido.",
-        ERR_WAPP_DOWNLOAD_MEDIA:
-          "No se pudo descargar medios de WhatsApp. Verifique la página de conexiones.",
-        ERR_INVALID_CREDENTIALS:
-          "Error de autenticación. Por favor, inténtelo de nuevo.",
-        ERR_SENDING_WAPP_MSG:
-          "Error al enviar mensaje de WhatsApp. Verifique la página de conexiones.",
+        ERR_WAPP_DOWNLOAD_MEDIA: "No se pudo descargar medios de WhatsApp. Verifique la página de conexiones.",
+        ERR_INVALID_CREDENTIALS: "Error de autenticación. Por favor, inténtelo de nuevo.",
+        ERR_SENDING_WAPP_MSG: "Error al enviar mensaje de WhatsApp. Verifique la página de conexiones.",
         ERR_DELETE_WAPP_MSG: "No se pudo eliminar el mensaje de WhatsApp.",
         ERR_EDITING_WAPP_MSG: "No se pudo editar el mensaje de WhatsApp.",
         ERR_OTHER_OPEN_TICKET: "Ya hay un ticket abierto para este contacto.",
         ERR_SESSION_EXPIRED: "Sesión expirada. Por favor, inicie sesión.",
-        ERR_USER_CREATION_DISABLED:
-          "La creación de usuarios está deshabilitada por el administrador.",
-        ERR_NO_PERMISSION: "No tiene permisos para acceder a este recurso.",
+        ERR_USER_CREATION_DISABLED: "La creación de usuarios está deshabilitada por el administrador.",
+        ERR_NO_PERMISSION: "No tiene permisos para acceder a este recurso.", // Same as ERR_FORBIDDEN
         ERR_DUPLICATED_CONTACT: "Ya existe un contacto con este número.",
         ERR_NO_SETTING_FOUND: "No se encontró ninguna configuración con este ID.",
         ERR_NO_CONTACT_FOUND: "No se encontró ningún contacto con este ID.",
         ERR_NO_TICKET_FOUND: "No se encontró ningún ticket con este ID.",
         ERR_NO_USER_FOUND: "No se encontró ningún usuario con este ID.",
-        ERR_NO_WAPP_FOUND: "No se encontró ningún WhatsApp con este ID.",
+        ERR_NO_WAPP_FOUND: "No se encontró ningún WhatsApp con este ID.", // Covers pt.js's ERR_NO_WAPP_FOUND
+        ERR_WAPP_NOT_FOUND: "Conexión no disponible.", // From pt.js
         ERR_CREATING_MESSAGE: "Error al crear el mensaje en la base de datos.",
         ERR_CREATING_TICKET: "Error al crear el ticket en la base de datos.",
-        ERR_FETCH_WAPP_MSG:
-          "Error al recuperar el mensaje de WhatsApp, tal vez sea muy antiguo.",
-        ERR_QUEUE_COLOR_ALREADY_EXISTS:
-          "Este color ya está en uso, elija otro.",
-        ERR_WAPP_GREETING_REQUIRED:
-          "El mensaje de saludo es obligatorio cuando hay más de una cola.",
+        ERR_FETCH_WAPP_MSG: "Error al recuperar el mensaje de WhatsApp, tal vez sea muy antiguo.",
+        ERR_QUEUE_COLOR_ALREADY_EXISTS: "Este color ya está en uso, elija otro.",
+        ERR_WAPP_GREETING_REQUIRED: "El mensaje de saludo es obligatorio cuando hay más de una cola.",
+        ERR_SUBSCRIPTION_CHECK_FAILED: "Suscripción inválida o no encontrada.", // From pt.js
+        ERR_SUBSCRIPTION_EXPIRED: "Suscripción expirada.", // From pt.js
+        ERR_UNKOWN: "Error desconocido.", // From pt.js
       },
-      ticketz: {
+      ticketz: { // Section added from pt.js and translated
         registration: {
           header: "Regístrate en la base de usuarios de Ticketz",
-          description: "Complete los campos a continuación para registrarse en la base de usuarios de Ticketz y recibir noticias sobre el proyecto.",
+          description: "Completa los campos a continuación para registrarte en la base de usuarios de Ticketz y recibir novedades sobre el proyecto.",
           name: "Nombre",
           country: "País",
-          phoneNumber: "Whatsapp Teléfono",
+          phoneNumber: "Número de Whatsapp",
           submit: "Registrar",
         },
         support: {
-          title: "Apoyar el proyecto Ticketz",
-          mercadopagotitle: "Tarjeta de crédito",
-          recurringbrl: "Donaciones recurrentes en BRL",
-          paypaltitle: "Tarjeta de crédito",
-          international: "Donaciones en USD",
+          title: "Apoya el proyecto Ticketz Open Source",
+          mercadopagotitle: "Tarjeta de Crédito",
+          recurringbrl: "Donaciones recurrentes en BRL", // BRL is specific, kept
+          paypaltitle: "Tarjeta de Crédito",
+          international: "Internacional en USD", // pt.js: "Internacional em US$"
         }
       },
     },
