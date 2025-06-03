@@ -101,9 +101,14 @@ const CreateMessageService = async ({
     .to(`queue-${message.ticket.queueId}-notification`)
     .emit(`company-${companyId}-appMessage`, {
       action: "create",
-      message,
-      ticket: message.ticket,
-      contact: message.ticket.contact
+      message: {
+        id: message.id,
+        ticketId: message.ticketId,
+        timestamp: message.createdAt,
+        senderId: message.contactId,
+        mediaType: message.mediaType,
+        ticketStatus: message.ticket.status
+      }
     });
 
   io.to(`company-${companyId}-mainchannel`).emit(

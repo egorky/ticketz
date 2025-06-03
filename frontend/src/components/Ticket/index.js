@@ -140,7 +140,7 @@ const Ticket = () => {
 
     socketManager.onConnect(onConnectTicket);
 
-    const onCompanyTicket = (data) => {
+    const onCompanyTicketCallback = (data) => {
       if (data.action === "update" && data.ticket.id === ticket.id) {
         setTicket(data.ticket);
       }
@@ -150,7 +150,7 @@ const Ticket = () => {
       }
     };
 
-    const onCompanyContact = (data) => {
+    const onCompanyContactCallback = (data) => {
       if (data.action === "update") {
         setContact((prevState) => {
           if (prevState.id === data.contact?.id) {
@@ -161,11 +161,15 @@ const Ticket = () => {
       }
     };
 
-    socket.on(`company-${companyId}-ticket`, onCompanyTicket);
-    socket.on(`company-${companyId}-contact`, onCompanyContact);
+    socket.on(`company-${companyId}-ticket`, onCompanyTicketCallback);
+    socket.on(`company-${companyId}-contact`, onCompanyContactCallback);
 
     return () => {
-      socket.disconnect();
+      socket.off(`company-${companyId}-ticket`, onCompanyTicketCallback);
+      socket.off(`company-${companyId}-contact`, onCompanyContactCallback);
+      if (ticket.id) {
+        socket.emit("leaveChatBox", `${ticket.id}`);
+      }
     };
   }, [ticketId, ticket, history, socketManager]);
 

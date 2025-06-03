@@ -155,7 +155,12 @@ export const edit = async (req: Request, res: Response): Promise<Response> => {
   const io = getIO();
   io.to(ticketId.toString()).emit(`company-${companyId}-appMessage`, {
     action: "update",
-    message
+    message: {
+      id: message.id,
+      ticketId: ticketId,
+      body: message.body,
+      isEdited: message.isEdited
+    }
   });
 
   return res.send();
@@ -326,4 +331,54 @@ export const send = async (req: Request, res: Response): Promise<Response> => {
     }
     throw new AppError("ERR_INTERNAL_ERROR", 500);
   }
+};
+
+export const showMessageById = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
+  const { messageId } = req.params;
+  const { companyId } = req.user;
+
+  const message = await Message.findOne({
+    where: { id: messageId, companyId },
+    include: [
+      "contact",
+      {
+        model: Ticket,
+        as: "ticket",
+        include: [
+          {
+            model: Contact,
+            as: "contact",
+            include: ["tags", "extraInfo"]
+          },
+          "queue",
+          "tags",
+          "user",
+          {
+            model: Whatsapp,
+            as: "whatsapp",
+            attributes: ["name", "id"]
+          }
+        ]
+      },
+      {
+        model: Message,
+        as: "quotedMsg",
+        include: ["contact"],
+        where: {
+          companyId
+        },
+        required: false
+      }
+      // Not including OldMessage as it's not essential for displaying a single message
+    ]
+  });
+
+  if (!message) {
+    throw new AppError("MESSAGE_NOT_FOUND", 404);
+  }
+
+  return res.status(200).json(message);
 };

@@ -546,6 +546,20 @@ const reducer = (state, action) => {
     return [...state];
   }
 
+  if (action.type === "UPDATE_MESSAGE_ACK") {
+    const { id, ack } = action.payload;
+    const messageIndex = state.findIndex((m) => m.id === id);
+    if (messageIndex !== -1) {
+      state[messageIndex].ack = ack;
+    }
+    return [...state];
+  }
+
+  if (action.type === "REMOVE_MESSAGE") {
+    const messageIdToRemove = action.payload;
+    return state.filter((m) => m.id !== messageIdToRemove);
+  }
+
   if (action.type === "UPDATE_MESSAGE") {
     const messageToUpdate = action.payload;
     const messageIndex = state.findIndex((m) => m.id === messageToUpdate.id);
@@ -633,31 +647,33 @@ const MessagesList = ({ ticket, ticketId, isGroup, markAsRead }) => {
 
     const socket = socketManager.GetSocket(companyId);
 
-    const onConnect = () => {
-      socket.emit("joinChatBox", `${ticket.id}`);
-    }
-
-    socketManager.onConnect(onConnect);
-
-    const onAppMessage = (data) => {
+    const onAppMessageCallback = async (data) => {
       if (data.message.ticketId === currentTicketId.current) {
         setContactPresence("available");
         if (data.action === "create") {
-          dispatch({ type: "ADD_MESSAGE", payload: data.message });
-          if (data.message.mediaType !== "reactionMessage") {
+          const { data: fullMessage } = await api.get("/messages/id/" + data.message.id);
+          dispatch({ type: "ADD_MESSAGE", payload: fullMessage });
+          if (fullMessage.mediaType !== "reactionMessage") {
             scrollToBottom();
-          } 
+          }
         }
 
         if (data.action === "update") {
-          dispatch({ type: "UPDATE_MESSAGE", payload: data.message });
+          if (data.message.ack !== undefined) {
+            dispatch({ type: "UPDATE_MESSAGE_ACK", payload: data.message });
+          } else if (data.message.body !== undefined) {
+            const { data: fullMessage } = await api.get("/messages/id/" + data.message.id);
+            dispatch({ type: "UPDATE_MESSAGE", payload: fullMessage });
+          }
+        }
+
+        if (data.action === "delete") {
+          dispatch({ type: "REMOVE_MESSAGE", payload: data.message.id });
         }
       }
-    }
+    };
 
-    socket.on(`company-${companyId}-appMessage`, onAppMessage);
-
-    socket.on(`company-${companyId}-presence`, (data) => {
+    const onPresenceCallback = (data) => {
       const { scrollTop, clientHeight, scrollHeight } = scrollRef.current;
       console.log({ presence: data.presence, scrollTop, clientHeight, scrollHeight });
       const isAtBottom = scrollTop + clientHeight >= (scrollHeight - clientHeight / 4);
@@ -669,10 +685,14 @@ const MessagesList = ({ ticket, ticketId, isGroup, markAsRead }) => {
           }
         }
       }
-    });
+    };
+
+    socket.on(`company-${companyId}-appMessage`, onAppMessageCallback);
+    socket.on(`company-${companyId}-presence`, onPresenceCallback);
 
     return () => {
-      socket.disconnect();
+      socket.off(`company-${companyId}-appMessage`, onAppMessageCallback);
+      socket.off(`company-${companyId}-presence`, onPresenceCallback);
     };
   }, [ticketId, ticket, socketManager]);
 

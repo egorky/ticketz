@@ -915,10 +915,11 @@ export const verifyDeleteMessage = async (
     .to(message.ticket.status)
     .to("notification")
     .emit(`company-${ticket.companyId}-appMessage`, {
-      action: "create",
-      message,
-      ticket: message.ticket,
-      contact: message.ticket.contact
+      action: "delete",
+      message: {
+        id: message.id,
+        ticketId: message.ticketId
+      }
     });
 };
 
@@ -1971,7 +1972,11 @@ const handleMsgAck = async (msg: WAMessage, ack: number) => {
       `company-${messageToUpdate.companyId}-appMessage`,
       {
         action: "update",
-        message: messageToUpdate
+        message: {
+          id: messageToUpdate.id,
+          ticketId: messageToUpdate.ticketId,
+          ack: messageToUpdate.ack
+        }
       }
     );
   } catch (err) {
